@@ -5,3 +5,5 @@ This game sends 1eos to lotteryxx1oo and 100eos will be sent to one of 100 peopl
 IOS Smart Contract was used and the source was released.
 
 account: lotteryxx1oo
+
+account: https://bloks.io/account/lotteryxx1oo
