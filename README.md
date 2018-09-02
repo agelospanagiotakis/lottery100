@@ -4,7 +4,7 @@ This game sends 1eos to lotteryxx1oo and 100eos will be sent to one of 100 peopl
 
 IOS Smart Contract was used and the source was released.
 
-account: lotteryxx1oo
+account-name: lotteryxx1oo
 
 amount : 1.0000 EOS
 
