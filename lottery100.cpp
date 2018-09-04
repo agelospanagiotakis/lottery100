@@ -16,7 +16,6 @@ public:
   {
   }
 
-  //@abi action
   void transferact(uint64_t receiver, uint64_t code)
   {
     eosio_assert(code == N(eosio.token), "I reject your non-eosio.token deposit");
@@ -28,7 +27,6 @@ public:
     eosio_assert(data.quantity.amount > 0, "When pigs fly");
 
     int64_t amount = data.quantity.amount;
-
 
     if (amount == 1000 || amount == 10000 || amount == 100000 || amount == 1000000 || amount == 10000000)
     {
@@ -63,7 +61,7 @@ public:
           bal.holder = data.from;
         });
 
-        withdraw(data.from, 1, "(" + std::to_string(i) + "/100) join lottery100. good luck");
+        withdraw(data.from, 1, "(" + std::to_string(i) + "/100) joined lottery100. good luck");
 
         if (i == 100)
         {
