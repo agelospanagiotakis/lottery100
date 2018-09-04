@@ -8,4 +8,4 @@ account-name: lotteryxx1oo
 
 amount : 1.0000 EOS
 
-history: https://bloks.io/account/lotteryxx1oo
+history: https://eosflare.io/account/lotteryxx1oo
