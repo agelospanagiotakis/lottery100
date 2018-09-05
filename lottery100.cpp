@@ -16,6 +16,33 @@ public:
   {
   }
 
+  /// @abi action
+  void refundinit(int64_t amount)
+  {
+      require_auth(_self);
+
+      balances balancetable(_self, _self);
+      games gametable(_self, _self);
+
+      auto existing = gametable.find(amount);
+      if (existing != gametable.end())
+      {
+       int8_t i = (existing->count == 0 ? 1 : existing->count);
+
+       for(int64_t pos = 1; pos <= i; pos++){
+
+          auto onebalance = balancetable.find(pos + amount);
+          if (onebalance != balancetable.end())
+          {
+              withdraw(onebalance->holder, (amount - 1), "refund lottery100.");
+              balancetable.erase(onebalance);
+          }
+       }
+          gametable.erase(existing);
+      }
+
+  }
+
   void transferact(uint64_t receiver, uint64_t code)
   {
     eosio_assert(code == N(eosio.token), "I reject your non-eosio.token deposit");
@@ -184,4 +211,4 @@ public:
     }                                                                                                                    \
   }
 
-EOSIO_ABI2(lottery100, (join))
+EOSIO_ABI2(lottery100, (join) (refundinit))
