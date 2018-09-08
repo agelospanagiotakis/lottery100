@@ -6,7 +6,7 @@
 
 using namespace eosio;
 
-class lottery100 : public eosio::contract
+class lottery10 : public eosio::contract
 {
 public:
   using contract::contract;
@@ -34,7 +34,7 @@ public:
           auto onebalance = balancetable.find(pos + amount);
           if (onebalance != balancetable.end())
           {
-              withdraw(onebalance->holder, (amount - 1), "refund lottery100.");
+              withdraw(onebalance->holder, (amount - 1), "refund sorry. rule change. 100 -> 10 participants. visit https://lottery100.io/");
               balancetable.erase(onebalance);
           }
        }
@@ -88,9 +88,9 @@ public:
           bal.holder = data.from;
         });
 
-        withdraw(data.from, 1, "(" + std::to_string(i) + "/100) joined lottery100. good luck");
+        withdraw(data.from, 1, "(" + std::to_string(i) + "/10) joined lottery100. good luck");
 
-        if (i == 100)
+        if (i == 10)
         {
           uint8_t rand1 = rand();
           int64_t pos = rand1 + amount;
@@ -98,11 +98,11 @@ public:
 
           if (onebalance != balancetable.end())
           {
-            withdraw(onebalance->holder, 99 * amount, "celebration, earn 100 times");
+            withdraw(onebalance->holder, 9.9 * amount, "celebration, earn 10 times");
 
-            withdraw(N(lottery1ooba), ((1 * amount) - 100), "fee 1%");
+            withdraw(N(lottery1ooba), ((0.1 * amount) - 10), "fee 1%");
 
-            for (int64_t i = 1; i <= 100; i++)
+            for (int64_t i = 1; i <= 10; i++)
             {
               auto existing = balancetable.find(i + amount);
               balancetable.erase(existing);
@@ -140,7 +140,7 @@ public:
     const char *mixedChar = reinterpret_cast<const char *>(&mixedBlock);
     sha256((char *)mixedChar, sizeof(mixedChar), &result);
     const char *p64 = reinterpret_cast<const char *>(&result);
-    uint8_t r = (abs((int8_t)p64[0]) % (100)) + 1;
+    uint8_t r = (abs((int8_t)p64[0]) % (10)) + 1;
     return r;
   }
 
@@ -211,4 +211,4 @@ public:
     }                                                                                                                    \
   }
 
-EOSIO_ABI2(lottery100, (join) (refundinit))
+EOSIO_ABI2(lottery10, (join) (refundinit))
