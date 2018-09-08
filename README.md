@@ -11,7 +11,7 @@ account-name: lotteryxx1oo
 
 amount : 0.1000 EOS, 1.0000 EOS, 10.0000 EOS, 100.0000 EOS
 
-site : https://www.lottery100.io/
+site : https://lottery100.io/
 
 history: https://eosflare.io/account/lotteryxx1oo
 
