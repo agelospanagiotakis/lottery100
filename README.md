@@ -1,9 +1,9 @@
 EOS smart contract gambling game
 
-Join us with 0.1000 EOS! 
-As soon as we have 10 participants, 
-the winner will receive 1.0000 EOS.
-You could be the winner! (fee 1%)
+Join us with 0.1000 EOS!   
+As soon as we have 10 participants,  
+the winner will receive 1.0000 EOS.  
+You could be the winner! (fee 1%)  
 
 All this has been implemented using Smart Contracts and no one can tamper with the voting process.
 
