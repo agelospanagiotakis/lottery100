@@ -9,7 +9,7 @@ All this has been implemented using Smart Contracts and no one can tamper with t
 
 account-name: lotteryxx1oo
 
-amount : 0.1000 EOS
+amount : 0.1000 EOS, 1.0000 EOS, 10.0000 EOS, 100.0000 EOS
 
 site : https://www.lottery100.io/
 
