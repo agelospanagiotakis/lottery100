@@ -16,3 +16,5 @@ site : https://lottery100.io/
 history: https://eosflare.io/account/lotteryxx1oo
 
 2018-09-07 rule change : 100 -> 10 participants
+
+contact : eoslot100@gmail.com
